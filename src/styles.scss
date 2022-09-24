@@ -1,1 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+
+$primary : #30c0ee;
+$secondary: #3e4991;
+$success: #109e52;
+$info: #6a1d48;
+$warning: #e5c711;
+$danger: #f1071d;
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
+
+.btn-round {
+    border-radius: 100%;
+}

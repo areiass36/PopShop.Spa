@@ -1,0 +1,27 @@
+<nav class="navbar navbar-expand-lg bg-primary mb-5">
+    <div class="container">
+        <a class="navbar-brand text-light d-none d-sm-block" href="#">PopShop</a>
+        <form class="d-flex col-12 col-sm-8 col-md-6 col-lg-4" role="search" [formGroup]="searchForm">
+            <button id="menuBtn" class="btn btn-primary btn-round d-block d-sm-none me-2"
+                (click)="offCanvas.open(menu)">
+                <fa-icon [icon]="menuIcon" class="erase"></fa-icon>
+            </button>
+
+            <input class="form-control me-2" type="text" aria-label="Pesquisar" [formControl]="searchTerm">
+
+            <button class="btn btn-outline-light btn-round" type="submit">
+                <fa-icon [icon]="searchIcon"></fa-icon>
+            </button>
+        </form>
+    </div>
+</nav>
+
+<ng-template #menu let-offcanvas>
+    <div class="offcanvas-header">
+        <h4 class="offcanvas-title" id="offcanvas-basic-title">Eduardo Silva</h4>
+        <button class="btn-close" (click)="offcanvas.dismiss()"></button>
+    </div>
+    <div class="offcanvas-body">
+        Corpo do menu
+    </div>
+</ng-template>
